@@ -1,0 +1,8 @@
+name: "BetterEmotes"
+author: "xxAROX"
+website: "https://github.com/xxAROX/"
+version: "1.0"
+description: "BetterEmotes plugin by xxAROX."
+
+api: [ "3.0.0" ]
+main: xxAROX\BetterEmotes\Main
