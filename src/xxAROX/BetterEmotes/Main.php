@@ -21,9 +21,6 @@ class Main extends PluginBase implements Listener{
 	public function onData(\pocketmine\event\server\DataPacketReceiveEvent $event): void{
 		$pk = $event->getPacket();
 		if ($pk instanceof \pocketmine\network\mcpe\protocol\EmotePacket) {
-			var_dump($event->getPlayer()->getId());
-			var_dump($pk->getEmoteId());
-			var_dump($pk->getFlags());
 			\pocketmine\Server::getInstance()->broadcastPacket(\pocketmine\Server::getInstance()->getOnlinePlayers(), \pocketmine\network\mcpe\protocol\EmotePacket::create($event->getPlayer()->getId(), $pk->getEmoteId(), 1 << 0));
 		}
 	}
